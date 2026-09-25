@@ -1,0 +1,183 @@
+/* ================================
+   RESET
+================================ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* ================================
+   BODY
+================================ */
+
+body {
+    font-family: Arial, sans-serif;
+    overflow: hidden;
+}
+
+
+/* ================================
+   MAIN CAMPUS
+================================ */
+
+.campus {
+    width: 100%;
+    height: 100vh;
+
+    position: relative;
+    overflow: hidden;
+
+    background: #000;
+}
+
+
+/* ================================
+   BACKGROUND IMAGE
+================================ */
+
+.background {
+    position: absolute;
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    transform: scale(1.05);
+    transition: transform 4.2s ease;
+
+    z-index: 1;
+}
+
+
+/* Current background */
+
+.background-current {
+    z-index: 1;
+    opacity: 1;
+     transition: transform 2.2s ease;
+}
+
+
+/* ================================
+   DARK OVERLAY
+================================ */
+
+.overlay {
+    position: absolute;
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background: rgba(0, 0, 0, 0.40);
+
+    z-index: 2;
+
+    pointer-events: none;
+}
+
+
+/* ================================
+   TEXT CONTENT
+================================ */
+
+.content {
+    position: absolute;
+
+    left: 8%;
+    bottom: 15%;
+
+    max-width: 650px;
+
+    color: white;
+
+    z-index: 3;
+
+    pointer-events: none;
+}
+
+
+/* ================================
+   TITLE
+================================ */
+
+#title {
+    font-size: 64px;
+    font-weight: 700;
+
+    line-height: 1.1;
+
+    margin-bottom: 18px;
+
+    color: white;
+}
+
+
+/* ================================
+   DESCRIPTION
+================================ */
+
+#description {
+    font-size: 20px;
+
+    line-height: 1.6;
+
+    max-width: 600px;
+
+    color: white;
+}
+
+
+/* ================================
+   TABLET
+================================ */
+
+@media (max-width: 900px) {
+
+    .content {
+        left: 6%;
+        bottom: 12%;
+        max-width: 600px;
+    }
+
+    #title {
+        font-size: 48px;
+    }
+
+    #description {
+        font-size: 18px;
+    }
+}
+
+
+/* ================================
+   MOBILE
+================================ */
+
+@media (max-width: 600px) {
+
+    .content {
+        left: 6%;
+        right: 6%;
+        bottom: 10%;
+        max-width: none;
+    }
+
+    #title {
+        font-size: 38px;
+        line-height: 1.15;
+        margin-bottom: 12px;
+    }
+
+    #description {
+        font-size: 16px;
+        line-height: 1.5;
+    }
+}
